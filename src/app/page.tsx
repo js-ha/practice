@@ -1,14 +1,15 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { cache, useEffect } from 'react';
 import Main from './main';
+import getBlogContent from '@/lib/api/blog';
 
 const Home = () => {
   useEffect(() => {
-    const apiTest = async () => {
-      const res = await fetch('http://localhost:3000/api/blog');
-      console.log(res.json());
-    };
+    const apiTest = cache(async () => {
+      const res = await getBlogContent();
+      console.log(res.data);
+    });
     apiTest();
   }, []);
 
