@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import EmotionProvider from '@/lib/provider/emotion';
+import Header from '@/components/header';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <EmotionProvider>{children}</EmotionProvider>
+        <EmotionProvider>
+          <Header />
+          {children}
+        </EmotionProvider>
       </body>
     </html>
   );
