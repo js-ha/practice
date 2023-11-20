@@ -2,6 +2,7 @@
 
 import React, { cache, useEffect } from 'react';
 import getBlogContent from '@/lib/api/blog';
+import Visual from '@/app/main/visual';
 
 const Main = () => {
   useEffect(() => {
@@ -11,7 +12,7 @@ const Main = () => {
     });
     apiTest();
   }, []);
-  return <div>메인페이지</div>;
+  return <Visual />;
 };
 
 export default Main;
