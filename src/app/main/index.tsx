@@ -3,6 +3,7 @@
 import React, { cache, useEffect } from 'react';
 import getBlogContent from '@/lib/api/blog';
 import Visual from '@/app/main/visual';
+import * as S from './style';
 
 const Main = () => {
   useEffect(() => {
@@ -12,7 +13,11 @@ const Main = () => {
     });
     apiTest();
   }, []);
-  return <Visual />;
+  return (
+    <S.Section>
+      <Visual />
+    </S.Section>
+  );
 };
 
 export default Main;

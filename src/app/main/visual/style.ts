@@ -1,18 +1,16 @@
 'use client';
 
 import styled from '@emotion/styled';
-import Image from 'next/image';
 
 export const Container = styled.div`
-  width: 100vw;
-  height: 150px;
   position: relative;
-  object-fit: cover;
 `;
 
-export const StyledImage = styled(Image)`
+export const Wrapper = styled.picture`
+  position: relative;
+  display: block;
   width: 100%;
-  height: 100%;
+  height: 150px;
   object-fit: cover;
 `;
 
@@ -22,12 +20,15 @@ export const Text = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  h3 {
-    font-size: 20px;
-    color: ${({ theme }) => theme.colors.white};
-  }
-  p {
-    font-size: 15px;
-    color: ${({ theme }) => theme.colors.white};
-  }
+  z-index: 10;
+`;
+
+export const Title = styled.h3`
+  font-size: 20px;
+  color: ${({ theme }) => theme.colors.white};
+`;
+
+export const Desc = styled.p`
+  font-size: 15px;
+  color: ${({ theme }) => theme.colors.white};
 `;
