@@ -1,20 +1,28 @@
 import React from 'react';
 import * as S from './style';
 import Link from 'next/link';
-import { MdOutlineBook } from 'react-icons/md';
+import LogoIcon from '/public/images/icon/puzzle.svg';
 
 const Header = () => {
   return (
     <S.Header>
       <S.Container>
-        <Link href="/">
-          <S.IconWrap>
-            <MdOutlineBook />
-          </S.IconWrap>
-        </Link>
-        <Link href="/">
-          <S.Title>Book History 독서기록</S.Title>
-        </Link>
+        <S.LogoWrapper>
+          <Link href="/">
+            <S.IconWrap>
+              <LogoIcon />
+            </S.IconWrap>
+          </Link>
+          <Link href="/">
+            <S.Title>JISU BLOG</S.Title>
+          </Link>
+        </S.LogoWrapper>
+        <div>
+          <S.CategoryTitle>About</S.CategoryTitle>
+          <S.CategoryTitle>Blog</S.CategoryTitle>
+          <S.CategoryTitle>Tags</S.CategoryTitle>
+          <S.CategoryTitle>Projects</S.CategoryTitle>
+        </div>
       </S.Container>
     </S.Header>
   );

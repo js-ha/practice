@@ -24,11 +24,6 @@ export const Text = styled.div`
 `;
 
 export const Title = styled.h3`
-  font-size: 20px;
-  color: ${({ theme }) => theme.colors.white};
-`;
-
-export const Desc = styled.p`
-  font-size: 15px;
+  font-size: 30px;
   color: ${({ theme }) => theme.colors.white};
 `;

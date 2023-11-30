@@ -9,8 +9,14 @@ export const Header = styled.header`
 
 export const Container = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
+`;
+
+export const LogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const Title = styled.div`
@@ -22,8 +28,10 @@ export const Title = styled.div`
 `;
 
 export const IconWrap = styled.div`
-  svg {
-    color: #aaa;
-    font-size: 40px;
-  }
+  width: 50px;
+`;
+
+export const CategoryTitle = styled.span`
+  color: ${({ theme }) => theme.colors.white};
+  margin-right: 1rem;
 `;
